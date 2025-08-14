@@ -31,6 +31,7 @@ Preferred communication style: Simple, everyday language.
 - Added comprehensive SEO optimization tags to improve Google rankings
 - Updated hero section background to use background-video.mp4 from public folder (January 14, 2025)
 - Downloaded and implemented Silver Cloud's hero background image (London cityscape) matching their website design (January 14, 2025)
+- Restored video background with London aerial footage, using multiple video sources as fallback (January 14, 2025)
 
 ## System Architecture
 
