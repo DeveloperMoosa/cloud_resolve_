@@ -29,6 +29,7 @@ Preferred communication style: Simple, everyday language.
 - Updated contact email to info@cloudresolve.co.uk
 - Removed physical address from contact section as per user request
 - Added comprehensive SEO optimization tags to improve Google rankings
+- Updated hero section background to use background-video.mp4 from public folder (January 14, 2025)
 
 ## System Architecture
 
