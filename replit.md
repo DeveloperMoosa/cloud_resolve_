@@ -30,6 +30,7 @@ Preferred communication style: Simple, everyday language.
 - Removed physical address from contact section as per user request
 - Added comprehensive SEO optimization tags to improve Google rankings
 - Updated hero section background to use background-video.mp4 from public folder (January 14, 2025)
+- Downloaded and implemented Silver Cloud's hero background image (London cityscape) matching their website design (January 14, 2025)
 
 ## System Architecture
 

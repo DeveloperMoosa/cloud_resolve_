@@ -19,20 +19,13 @@ const HeroSection = () => {
       id="home"
       className="relative h-screen overflow-hidden"
     >
-      {/* Local Video Background */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source 
-          src="/background-video.mp4" 
-          type="video/mp4" 
-        />
-        Your browser does not support the video tag.
-      </video>
+      {/* Background Image - matching Silver Cloud style */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url("/hero-background.jpg")',
+        }}
+      />
       
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
