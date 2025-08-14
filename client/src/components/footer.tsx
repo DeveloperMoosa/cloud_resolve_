@@ -118,16 +118,16 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <div className="space-y-2 text-gray-300">
-              <p>54 Poland Street</p>
-              <p>London W1F 7NJ, UK</p>
+              <p>14 Garner Road</p>
+              <p>Walthamstow, London E17 4HQ</p>
               <p>
-                <a href="tel:02035976100" className="hover:text-white transition-colors">
-                  Phone: 020 3597 6100
+                <a href="tel:0208251251" className="hover:text-white transition-colors">
+                  Phone: 0208 251 251
                 </a>
               </p>
               <p>
-                <a href="mailto:info@cloudresolve.com" className="hover:text-white transition-colors">
-                  Email: info@cloudresolve.com
+                <a href="mailto:info@cloudresolve.co.uk" className="hover:text-white transition-colors">
+                  Email: info@cloudresolve.co.uk
                 </a>
               </p>
             </div>

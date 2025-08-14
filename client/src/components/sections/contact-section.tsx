@@ -95,7 +95,7 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-semibold text-gray-900">Tel:</h4>
                   <p className="text-gray-700">
-                    <a href="tel:02035976100" className="transition-colors" onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(207, 90%, 49%)'} onMouseLeave={(e) => e.currentTarget.style.color = ''}>020 3597 6100</a>
+                    <a href="tel:0208251251" className="transition-colors" onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(207, 90%, 49%)'} onMouseLeave={(e) => e.currentTarget.style.color = ''}>0208 251 251</a>
                   </p>
                 </div>
                 <div>
@@ -103,6 +103,11 @@ const ContactSection = () => {
                   <p className="text-gray-700">
                     <a href="mailto:info@cloudresolve.co.uk" className="transition-colors" onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(207, 90%, 49%)'} onMouseLeave={(e) => e.currentTarget.style.color = ''}>info@cloudresolve.co.uk</a>
                   </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900">Address:</h4>
+                  <p className="text-gray-700">14 Garner Road</p>
+                  <p className="text-gray-700">Walthamstow, London E17 4HQ</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Social:</h4>

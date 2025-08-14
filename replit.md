@@ -26,8 +26,10 @@ Preferred communication style: Simple, everyday language.
 - Added abstract wave background to Experience section with subtle animation effect (iStock video background)
 - Removed all customer reviews from testimonials section as per user request (July 17, 2025)
 - Replaced all "Silver Cloud" references with "CloudResolve" throughout the site (July 17, 2025)
-- Updated contact email to info@cloudresolve.co.uk
-- Removed physical address from contact section as per user request
+- Updated all contact information with CloudResolve details (January 14, 2025):
+  - Email: info@cloudresolve.co.uk
+  - Phone: 0208 251 251
+  - Address: 14 Garner Road, Walthamstow, London E17 4HQ
 - Added comprehensive SEO optimization tags to improve Google rankings
 - Updated hero section background to use background-video.mp4 from public folder (January 14, 2025)
 - Downloaded and implemented Silver Cloud's hero background image (London cityscape) matching their website design (January 14, 2025)

@@ -9,16 +9,16 @@ const ContactBanner = () => {
             <Phone className="w-6 h-6" />
             <div>
               <span className="text-lg font-semibold">Call us on: </span>
-              <a href="tel:02035976100" className="text-lg font-bold hover:underline">
-                020 3597 6100
+              <a href="tel:0208251251" className="text-lg font-bold hover:underline">
+                0208 251 251
               </a>
             </div>
           </div>
           
           <div className="flex items-center gap-3">
             <Mail className="w-6 h-6" />
-            <a href="mailto:info@silvercloud-tech.com" className="text-lg font-bold hover:underline">
-              info@silvercloud-tech.com
+            <a href="mailto:info@cloudresolve.co.uk" className="text-lg font-bold hover:underline">
+              info@cloudresolve.co.uk
             </a>
           </div>
         </div>
