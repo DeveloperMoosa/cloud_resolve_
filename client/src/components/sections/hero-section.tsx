@@ -80,7 +80,7 @@ const HeroSection = () => {
                 QUICK QUOTE
               </Button>
               <Button
-                onClick={() => scrollToSection("about")}
+                onClick={() => scrollToSection("experience")}
                 className="bg-azure-600 hover:bg-azure-700 text-white px-8 py-4 text-lg font-semibold rounded-sm transition-all"
                 style={{ backgroundColor: 'hsl(207, 90%, 49%)', borderColor: 'hsl(207, 90%, 49%)' }}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'hsl(207, 90%, 44%)'}

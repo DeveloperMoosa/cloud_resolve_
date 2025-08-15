@@ -45,7 +45,7 @@ const Navigation = () => {
                 Home
               </button>
               <button
-                onClick={() => scrollToSection("about")}
+                onClick={() => scrollToSection("experience")}
                 className="text-gray-700 px-3 py-2 text-sm font-medium transition-colors"
                 onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(207, 90%, 49%)'}
                 onMouseLeave={(e) => e.currentTarget.style.color = ''}
@@ -100,7 +100,7 @@ const Navigation = () => {
                 Home
               </button>
               <button
-                onClick={() => scrollToSection("about")}
+                onClick={() => scrollToSection("experience")}
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-primary w-full text-left"
               >
                 About

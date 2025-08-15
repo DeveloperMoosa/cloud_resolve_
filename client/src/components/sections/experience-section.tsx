@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const ExperienceSection = () => {
   return (
-    <section className="py-20 relative overflow-hidden bg-gray-50">
+    <section id="experience" className="py-20 relative overflow-hidden bg-gray-50">
       {/* Abstract Wave Background */}
       <div className="absolute inset-0">
         <svg
