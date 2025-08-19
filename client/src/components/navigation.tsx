@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Cloud, Menu, X } from "lucide-react";
+import { Link, useLocation } from "wouter";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,6 +59,14 @@ const Navigation = () => {
               >
                 Services
               </button>
+              <Link
+                href="/insights"
+                className="text-gray-700 px-3 py-2 text-sm font-medium transition-colors"
+                onMouseEnter={(e) => e.currentTarget.style.color = 'hsl(207, 90%, 49%)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = ''}
+              >
+                Insights
+              </Link>
               <button
                 onClick={() => scrollToSection("contact")}
                 className="text-gray-700 hover:text-red-primary px-3 py-2 text-sm font-medium transition-colors"
@@ -111,6 +120,13 @@ const Navigation = () => {
               >
                 Services
               </button>
+              <Link
+                href="/insights"
+                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-primary w-full text-left"
+                onClick={() => setIsOpen(false)}
+              >
+                Insights
+              </Link>
               <button
                 onClick={() => scrollToSection("contact")}
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-red-primary w-full text-left"
