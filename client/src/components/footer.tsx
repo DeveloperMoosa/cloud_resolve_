@@ -25,8 +25,7 @@ const Footer = () => {
                 className="h-8 w-auto mr-3 object-contain"
                 style={{ 
                   backgroundColor: 'transparent',
-                  mixBlendMode: 'screen',
-                  filter: 'brightness(2) contrast(1.1)'
+                  filter: 'brightness(0) saturate(100%) invert(100%)'
                 }}
               />
               CloudResolve

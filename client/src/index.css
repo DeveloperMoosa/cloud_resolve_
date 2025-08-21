@@ -104,8 +104,7 @@ img[alt*="Logo"] {
 
 /* For dark backgrounds like footer */
 footer img[alt*="Logo"] {
-  mix-blend-mode: screen;
-  filter: brightness(2) contrast(1.1);
+  filter: brightness(0) saturate(100%) invert(100%);
 }
 
 /* For light backgrounds like header */
