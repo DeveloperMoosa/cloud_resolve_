@@ -104,7 +104,7 @@ img[alt*="Logo"] {
 
 /* For dark backgrounds like footer */
 footer img[alt*="Logo"] {
-  filter: brightness(0) saturate(100%) invert(100%);
+  /* Logo now has white background for visibility */
 }
 
 /* For light backgrounds like header */

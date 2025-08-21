@@ -19,15 +19,14 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <div className="text-2xl font-bold mb-4 flex items-center">
-              <img 
-                src="/footer-logo.png" 
-                alt="CloudResolve Logo" 
-                className="h-8 w-auto mr-3 object-contain"
-                style={{ 
-                  backgroundColor: 'transparent',
-                  filter: 'brightness(0) saturate(100%) invert(100%)'
-                }}
-              />
+              <div className="bg-white rounded p-2 mr-3">
+                <img 
+                  src="/footer-logo.png" 
+                  alt="CloudResolve Logo" 
+                  className="h-12 w-auto object-contain"
+                  onError={(e) => console.error('Footer logo failed to load:', e)}
+                />
+              </div>
               CloudResolve
             </div>
             <p className="text-gray-300 mb-4">
