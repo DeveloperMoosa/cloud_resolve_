@@ -137,7 +137,10 @@ const Navigation = () => {
               </button>
               <a
                 href="tel:0208251251"
-                className="block bg-red-600 text-white px-3 py-2 rounded-lg text-base font-medium hover:bg-red-700 transition-colors text-center mx-3"
+                className="block text-white px-3 py-2 rounded-lg text-base font-medium transition-colors text-center mx-3"
+                style={{ backgroundColor: 'hsl(207, 90%, 49%)' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'hsl(207, 90%, 44%)'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'hsl(207, 90%, 49%)'}
               >
                 Call: 0208 251 251
               </a>

@@ -186,7 +186,12 @@ const ContactSection = () => {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-red-600 hover:bg-red-700 text-white py-3 text-lg font-semibold rounded-sm transition-all"
+                className="w-full text-white py-3 text-lg font-semibold rounded-sm transition-all"
+                style={{ 
+                  backgroundColor: isSubmitting ? 'hsl(207, 90%, 30%)' : 'hsl(207, 90%, 49%)'
+                }}
+                onMouseEnter={(e) => !isSubmitting && (e.currentTarget.style.backgroundColor = 'hsl(207, 90%, 44%)')}
+                onMouseLeave={(e) => !isSubmitting && (e.currentTarget.style.backgroundColor = 'hsl(207, 90%, 49%)')}
               >
                 {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
               </Button>
