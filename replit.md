@@ -47,6 +47,7 @@ Preferred communication style: Simple, everyday language.
 - Updated header navigation to use header-logo.png instead of new-logo.jpeg for consistent PNG transparency (January 21, 2025)
 - Applied transparency styles to all logo images using mix-blend-mode CSS properties
 - Replaced london-aerial-hq.mp4 with london-droneshot.mp4 for hero section background video with autoplay loop (January 21, 2025)
+- Removed footer-logo.png from footer section, leaving only CloudResolve text (January 21, 2025)
 
 ## System Architecture
 
