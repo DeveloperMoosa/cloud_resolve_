@@ -20,13 +20,13 @@ const Footer = () => {
           <div>
             <div className="text-2xl font-bold mb-4 flex items-center">
               <img 
-                src="/logo.jpeg" 
+                src="/footer-logo.png" 
                 alt="CloudResolve Logo" 
                 className="h-8 w-auto mr-3 object-contain"
                 style={{ 
                   backgroundColor: 'transparent',
-                  mixBlendMode: 'multiply',
-                  filter: 'contrast(1.1) brightness(2)'
+                  mixBlendMode: 'screen',
+                  filter: 'brightness(2) contrast(1.1)'
                 }}
               />
               CloudResolve
