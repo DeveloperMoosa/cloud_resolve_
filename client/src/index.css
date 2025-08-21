@@ -95,6 +95,25 @@
   overflow: hidden;
 }
 
+/* Logo transparency styles */
+img[alt*="Logo"] {
+  background-color: transparent !important;
+  mix-blend-mode: multiply;
+  object-fit: contain;
+}
+
+/* For dark backgrounds like footer */
+footer img[alt*="Logo"] {
+  mix-blend-mode: screen;
+  filter: brightness(2) contrast(1.1);
+}
+
+/* For light backgrounds like header */
+nav img[alt*="Logo"] {
+  mix-blend-mode: multiply;
+  filter: contrast(1.1);
+}
+
 :root {
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(220, 14.3%, 4.1%);
