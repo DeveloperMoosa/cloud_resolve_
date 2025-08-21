@@ -45,6 +45,7 @@ Preferred communication style: Simple, everyday language.
   - Each article includes relevant images and comprehensive content
   - Integrated with main navigation menu
 - Updated footer to use footer-logo.png instead of logo.jpeg for better transparency support (January 21, 2025)
+- Updated header navigation to use header-logo.png instead of new-logo.jpeg for consistent PNG transparency (January 21, 2025)
 - Applied transparency styles to all logo images using mix-blend-mode CSS properties
 
 ## System Architecture
