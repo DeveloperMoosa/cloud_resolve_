@@ -34,16 +34,15 @@ Preferred communication style: Simple, everyday language.
 - Updated hero section background to use background-video.mp4 from public folder (January 14, 2025)
 - Downloaded and implemented Silver Cloud's hero background image (London cityscape) matching their website design (January 14, 2025)
 - Restored video background with London aerial footage, using multiple video sources as fallback (January 14, 2025)
-- Added Insights blog page with six articles about cloud computing and business technology (January 20, 2025):
+- Added Insights blog page with articles about cloud computing and business technology (January 20, 2025):
   - Microsoft Teams vs Zoom: Which One Is Best for Your Business?
   - The Future of Work: Hybrid Office with Microsoft 365
   - Cloud Migration Success: A Manufacturing Company Case Study
-  - Azure Basics Explained with Real-Life Examples
   - Top 5 Benefits of Cloud Computing for Businesses
-  - IaaS vs PaaS vs SaaS: Simple Guide
   - Modern card-based layout with expandable full articles
   - Each article includes relevant images and comprehensive content
   - Integrated with main navigation menu
+  - Removed Azure Basics and IaaS vs PaaS vs SaaS articles as per user request (January 21, 2025)
 - Updated footer to use footer-logo.png instead of logo.jpeg for better transparency support (January 21, 2025)
 - Updated header navigation to use header-logo.png instead of new-logo.jpeg for consistent PNG transparency (January 21, 2025)
 - Applied transparency styles to all logo images using mix-blend-mode CSS properties
