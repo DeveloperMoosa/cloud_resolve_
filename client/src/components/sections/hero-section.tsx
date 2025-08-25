@@ -1,7 +1,33 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { useState, useEffect, useRef } from "react";
 
 const HeroSection = () => {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      // Check if video is already loaded
+      if (videoRef.current.readyState >= 3) {
+        setVideoLoaded(true);
+      }
+      
+      // Add event listener for when video can play
+      const handleCanPlay = () => {
+        setVideoLoaded(true);
+      };
+      
+      videoRef.current.addEventListener('canplay', handleCanPlay);
+      
+      return () => {
+        if (videoRef.current) {
+          videoRef.current.removeEventListener('canplay', handleCanPlay);
+        }
+      };
+    }
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -21,11 +47,16 @@ const HeroSection = () => {
     >
       {/* Video Background - London Skyline */}
       <video
+        ref={videoRef}
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        poster="/hero-background.jpg"
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+          videoLoaded ? 'opacity-100' : 'opacity-100'
+        }`}
+        style={{ backgroundColor: '#000' }}
       >
         <source 
           src="/london-droneshot.mp4" 
