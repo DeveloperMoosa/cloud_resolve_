@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudResolve - Leading IT Support Provider for Small Business</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'azure-blue': '#007FFF',
+                        'deep-navy': '#003366',
+                        'light-blue': '#E6F3FF',
+                        'azure-50': '#F0F8FF',
+                        'azure-100': '#E6F3FF',
+                        'azure-500': '#007FFF',
+                        'azure-600': '#0066CC',
+                        'azure-700': '#004C99',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'body': ['Open Sans', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                        'counter': 'counter 2s ease-out forwards',
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        @keyframes counter {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .floating-shape {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-shape:nth-child(even) {
+            animation-delay: -3s;
+            animation-direction: reverse;
+        }
+        
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .service-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .service-icon:hover {
+            transform: scale(1.1) rotate(5deg);
+            filter: brightness(1.2);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 127, 255, 0.1);
+        }
+        
+        .partner-logo {
+            transition: all 0.3s ease;
+            filter: grayscale(100%);
+        }
+        
+        .partner-logo:hover {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+        
+        .stats-counter {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .stats-counter.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-body bg-white">
+    <!-- Floating Background Shapes -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="floating-shape w-32 h-32 bg-azure-blue rounded-full top-10 left-10"></div>
+        <div class="floating-shape w-24 h-24 bg-azure-blue rounded-full top-1/4 right-20"></div>
+        <div class="floating-shape w-40 h-40 bg-azure-blue rounded-full bottom-1/3 left-1/4"></div>
+        <div class="floating-shape w-20 h-20 bg-azure-blue rounded-full bottom-20 right-10"></div>
+        <div class="floating-shape w-16 h-16 bg-azure-blue rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <!-- @COMPONENT: Navigation [fixed header with logo and navigation links] -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-azure-blue">
+                        <i class="fas fa-cloud mr-2"></i>CloudResolve
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="text-gray-700 hover:text-azure-blue px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="#about" class="text-gray-700 hover:text-azure-blue px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <a href="#services" class="text-gray-700 hover:text-azure-blue px-3 py-2 text-sm font-medium transition-colors">Services</a>
+                        <a href="#contact" class="text-gray-700 hover:text-azure-blue px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                        <a href="tel:02035976100" class="bg-azure-blue text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-azure-600 transition-colors">Call: 020 3597 6100</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-azure-blue">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- Hero Section -->
+    <!-- @COMPONENT: HeroSection [main banner with background image and call-to-action] -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center parallax-bg" style="background-image: linear-gradient(rgba(0, 127, 255, 0.8), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1926&h=1080');">
+        <!-- Modern office environment with people working on computers and technology -->
+        <div class="absolute inset-0 bg-gradient-to-r from-azure-blue/80 to-deep-navy/80"></div>
+        <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Leading Independent IT Support Provider
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 font-light">
+                CloudResolve is a leading independent IT support provider supplying cost-effective services and bespoke solutions to small businesses.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#contact" class="bg-white text-azure-blue px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
+                    QUICK QUOTE
+                </a>
+                <a href="#about" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-azure-blue transition-all transform hover:scale-105">
+                    ABOUT US
+                </a>
+            </div>
+            <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6">
+                <div class="text-center">
+                    <p class="text-sm mb-2">Call us on:</p>
+                    <p class="text-2xl font-bold">020 3597 6100</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-sm mb-2">Email us:</p>
+                    <a href="mailto:info@cloudresolve.com" class="text-xl hover:underline">info@cloudresolve.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: HeroSection -->
+
+    <!-- About Section -->
+    <!-- @COMPONENT: AboutSection [company description and value proposition] -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <!-- Professional IT support team in a modern office setting -->
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&h=600" alt="Professional IT support team" class="rounded-xl shadow-lg w-full h-auto" />
+                </div>
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                        Experience The Difference: Trusted, Knowledgeable and Reliable IT Support
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        CloudResolve is a leading independent IT support provider working with small businesses across the UK. We deliver cost-effective services and bespoke solutions tailored specifically for SMB requirements.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Ideal for anyone seeking first-class IT support, our team always listens closely to your unique business requirements, so we can recommend the best solutions from our extensive and fully customisable portfolio.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-azure-blue text-xl mr-3"></i>
+                            <span class="text-lg">Benefit from impartial and unbiased advice</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-azure-blue text-xl mr-3"></i>
+                            <span class="text-lg">Comprehensive evaluation of current technologies</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-azure-blue text-xl mr-3"></i>
+                            <span class="text-lg">Tailored solutions aligned with business goals</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="inline-block mt-8 bg-azure-blue text-white px-8 py-3 rounded-lg font-semibold hover:bg-azure-600 transition-colors transform hover:scale-105">
+                        REQUEST A BROCHURE
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: AboutSection -->
+
+    <!-- Services Section -->
+    <!-- @COMPONENT: ServicesSection [showcase of 6 main service categories with animated icons] -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    Our Wide Range Of IT Support Services
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Comprehensive IT solutions designed specifically for small business success
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Microsoft 365 Service -->
+                <div class="text-center p-8 rounded-xl bg-azure-50 hover:bg-azure-100 transition-all transform hover:scale-105">
+                    <div class="service-icon mb-6">
+                        <i class="fab fa-microsoft text-6xl text-azure-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Microsoft 365 & Backup</h3>
+                    <p class="text-gray-600">Complete Microsoft 365 setup, management, and backup solutions for seamless productivity.</p>
+                </div>
+
+                <!-- Server Management -->
+                <div class="text-center p-8 rounded-xl bg-azure-50 hover:bg-azure-100 transition-all transform hover:scale-105">
+                    <div class="service-icon mb-6">
+                        <i class="fas fa-server text-6xl text-azure-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Server Management</h3>
+                    <p class="text-gray-600">Professional server setup, maintenance, and monitoring to keep your business running smoothly.</p>
+                </div>
+
+                <!-- Security Monitoring -->
+                <div class="text-center p-8 rounded-xl bg-azure-50 hover:bg-azure-100 transition-all transform hover:scale-105">
+                    <div class="service-icon mb-6">
+                        <i class="fas fa-shield-alt text-6xl text-azure-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Enhanced Security Monitoring 365</h3>
+                    <p class="text-gray-600">24/7 security monitoring and threat protection to safeguard your business data.</p>
+                </div>
+
+                <!-- ServiceDesk IT Support -->
+                <div class="text-center p-8 rounded-xl bg-azure-50 hover:bg-azure-100 transition-all transform hover:scale-105">
+                    <div class="service-icon mb-6">
+                        <i class="fas fa-headset text-6xl text-azure-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">ServiceDesk IT Support</h3>
+                    <p class="text-gray-600">Dedicated helpdesk support with rapid response times for all your IT needs.</p>
+                </div>
+
+                <!-- Network Management -->
+                <div class="text-center p-8 rounded-xl bg-azure-50 hover:bg-azure-100 transition-all transform hover:scale-105">
+                    <div class="service-icon mb-6">
+                        <i class="fas fa-network-wired text-6xl text-azure-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Network Management</h3>
+                    <p class="text-gray-600">Complete network infrastructure design, implementation, and ongoing management.</p>
+                </div>
+
+                <!-- Cloud Solutions -->
+                <div class="text-center p-8 rounded-xl bg-azure-50 hover:bg-azure-100 transition-all transform hover:scale-105">
+                    <div class="service-icon mb-6">
+                        <i class="fas fa-cloud text-6xl text-azure-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Cloud Solutions</h3>
+                    <p class="text-gray-600">Secure cloud migration and management services to modernize your business operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ServicesSection -->
+
+    <!-- Statistics Section -->
+    <!-- @COMPONENT: StatisticsSection [animated counters showing company metrics] -->
+    <section class="py-20 bg-azure-blue parallax-bg" style="background-image: linear-gradient(rgba(0, 127, 255, 0.9), rgba(0, 51, 102, 0.9)), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&h=1080');">
+        <!-- Modern server room with racks of servers and networking equipment -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-white mb-4">Experience Providing IT Support</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 text-center text-white">
+                <div class="stats-counter">
+                    <div class="text-6xl font-bold mb-4" data-target="20">0</div>
+                    <div class="text-xl">Years Experience</div>
+                </div>
+                <div class="stats-counter">
+                    <div class="text-6xl font-bold mb-4" data-target="1">0</div>
+                    <div class="text-xl">Hour Average Response Time</div>
+                </div>
+                <div class="stats-counter">
+                    <div class="text-6xl font-bold mb-4" data-target="15">0</div>
+                    <div class="text-xl">Years Average Customer Relationships</div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
+                    <i class="fas fa-clock text-2xl text-white"></i>
+                </div>
+                <p class="text-xl text-white">24/7 In-house IT Support</p>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: StatisticsSection -->
+
+    <!-- Awards Section -->
+    <!-- @COMPONENT: AwardsSection [company recognition and awards display] -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Award Winning</h2>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                    We are a multi-award-winning company, recognized as the Best IT Support Firm for Small Business 2024. 
+                    We are also proud winners of the Excellence in Service Awards 2024, celebrating the best small business IT support providers in the UK.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="text-center p-8 bg-white rounded-xl shadow-lg">
+                    <div class="w-24 h-24 bg-azure-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-trophy text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Best IT Support Firm 2024</h3>
+                    <p class="text-gray-600">Small Business Technology Awards 2024</p>
+                </div>
+                
+                <div class="text-center p-8 bg-white rounded-xl shadow-lg">
+                    <div class="w-24 h-24 bg-azure-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-medal text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Excellence in Service</h3>
+                    <p class="text-gray-600">The UK's Best Small Business IT Provider 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: AwardsSection -->
+
+    <!-- Testimonials Section -->
+    <!-- @COMPONENT: TestimonialsSection [customer reviews and feedback] -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+                <p class="text-xl text-gray-600">
+                    Experience honest, competent, and reliable IT support services tailored for small businesses
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-azure-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-quote-left text-2xl text-azure-blue mr-3"></i>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        "Great IT solutions and advice. They can work remotely so do not need to visit in most cases, thus providing instant or rapid solutions."
+                    </p>
+                    <div class="font-semibold text-gray-900">Jeremy MJ Havard</div>
+                    <div class="text-gray-600">Business Owner</div>
+                </div>
+                
+                <div class="testimonial-card bg-azure-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-quote-left text-2xl text-azure-blue mr-3"></i>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        "Worked with CloudResolve for several years. They provide expert knowledge together with excellent service. Would not hesitate to recommend."
+                    </p>
+                    <div class="font-semibold text-gray-900">Sarah Johnson</div>
+                    <div class="text-gray-600">Operations Manager</div>
+                </div>
+                
+                <div class="testimonial-card bg-azure-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-quote-left text-2xl text-azure-blue mr-3"></i>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        "Excellent IT support, fast, friendly & knowledgeable! Highly recommended for small business needs."
+                    </p>
+                    <div class="font-semibold text-gray-900">Nick Brown</div>
+                    <div class="text-gray-600">Small Business Owner</div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-azure-blue text-white px-8 py-3 rounded-lg font-semibold hover:bg-azure-600 transition-colors transform hover:scale-105">
+                    SEE MORE REVIEWS
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: TestimonialsSection -->
+
+    <!-- Partners Section -->
+    <!-- @COMPONENT: PartnersSection [technology partner logos carousel] -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Technology Partners</h2>
+                <p class="text-lg text-gray-600">We work with industry-leading technology providers</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+                <div class="partner-logo flex items-center justify-center p-4">
+                    <i class="fab fa-microsoft text-4xl text-gray-400"></i>
+                </div>
+                <div class="partner-logo flex items-center justify-center p-4">
+                    <i class="fab fa-apple text-4xl text-gray-400"></i>
+                </div>
+                <div class="partner-logo flex items-center justify-center p-4">
+                    <i class="fab fa-google text-4xl text-gray-400"></i>
+                </div>
+                <div class="partner-logo flex items-center justify-center p-4">
+                    <i class="fas fa-server text-4xl text-gray-400"></i>
+                </div>
+                <div class="partner-logo flex items-center justify-center p-4">
+                    <i class="fas fa-shield-alt text-4xl text-gray-400"></i>
+                </div>
+                <div class="partner-logo flex items-center justify-center p-4">
+                    <i class="fas fa-cloud text-4xl text-gray-400"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: PartnersSection -->
+
+    <!-- Contact Section -->
+    <!-- @COMPONENT: ContactSection [contact form and company information] -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
+                <p class="text-xl text-gray-600">
+                    Located in the heart of London, CloudResolve will never outsource our IT support. 
+                    Instead, we have our own team of IT experts and specialists ready to fulfil your software, hardware and infrastructure requirements.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div>
+                    <!-- Professional business meeting in a modern conference room -->
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&h=600" alt="Professional business meeting" class="rounded-xl shadow-lg w-full h-auto mb-8" />
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-2xl text-azure-blue mr-4"></i>
+                            <div>
+                                <h3 class="font-semibold text-lg">Address</h3>
+                                <p class="text-gray-600">54 Poland Street, London W1F 7NJ, UK</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-2xl text-azure-blue mr-4"></i>
+                            <div>
+                                <h3 class="font-semibold text-lg">Phone</h3>
+                                <p class="text-gray-600">020 3597 6100</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-2xl text-azure-blue mr-4"></i>
+                            <div>
+                                <h3 class="font-semibold text-lg">Email</h3>
+                                <p class="text-gray-600">info@cloudresolve.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-twitter text-2xl text-azure-blue mr-4"></i>
+                            <div>
+                                <h3 class="font-semibold text-lg">Social Media</h3>
+                                <p class="text-gray-600">@CloudResolveTech</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-azure-50 p-8 rounded-xl">
+                    <form class="space-y-6" data-implementation="Contact form should validate inputs and send email">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-azure-blue focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
+                            <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-azure-blue focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email*</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-azure-blue focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-azure-blue focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Please provide us with a brief description of your requirements*</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-azure-blue focus:border-transparent transition-all"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-azure-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-azure-600 transition-colors transform hover:scale-105">
+                            SUBMIT
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ContactSection -->
+
+    <!-- Footer -->
+    <!-- @COMPONENT: Footer [company information and links] -->
+    <footer class="bg-deep-navy text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4">
+                        <i class="fas fa-cloud mr-2"></i>CloudResolve
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Leading independent IT support provider for small businesses across the UK.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white text-xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">Microsoft 365</a></li>
+                        <li><a href="#" class="hover:text-white">Server Management</a></li>
+                        <li><a href="#" class="hover:text-white">Security Monitoring</a></li>
+                        <li><a href="#" class="hover:text-white">IT Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#about" class="hover:text-white">About Us</a></li>
+                        <li><a href="#services" class="hover:text-white">Services</a></li>
+                        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p>54 Poland Street</p>
+                        <p>London W1F 7NJ, UK</p>
+                        <p>Phone: 020 3597 6100</p>
+                        <p>Email: info@cloudresolve.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 CloudResolve. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <!-- JavaScript for Animations -->
+    <script>
+        (function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Animated counters
+            function animateCounters() {
+                const counters = document.querySelectorAll('.stats-counter [data-target]');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const counter = entry.target;
+                            const target = parseInt(counter.getAttribute('data-target'));
+                            let current = 0;
+                            const increment = target / 50;
+                            
+                            counter.parentElement.classList.add('animate');
+                            
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= target) {
+                                    current = target;
+                                    clearInterval(timer);
+                                }
+                                counter.textContent = Math.floor(current);
+                            }, 40);
+                            
+                            observer.unobserve(counter);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                counters.forEach(counter => observer.observe(counter));
+            }
+
+            // Initialize animations when DOM is loaded
+            document.addEventListener('DOMContentLoaded', function() {
+                animateCounters();
+                
+                // Form submission handler (placeholder)
+                const contactForm = document.querySelector('form');
+                if (contactForm) {
+                    contactForm.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        // TODO: Implement form submission logic
+                        alert('Thank you for your message! We will get back to you soon.');
+                    });
+                }
+            });
+
+            // Mobile menu toggle (placeholder)
+            const mobileMenuButton = document.querySelector('.md\\:hidden button');
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    // TODO: Implement mobile menu toggle
+                    console.log('Mobile menu toggle clicked');
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
